@@ -1,0 +1,26 @@
+{
+  "name": "studentregistration",
+  "version": "1.0.0",
+  "description": "a system to register students and store them as a list, also enabling editing and deletion of the records.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritickkumar08/Student_Registration_System.git"
+  },
+  "keywords": [
+    "student",
+    "registration"
+  ],
+  "author": "Ritick Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritickkumar08/Student_Registration_System/issues"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.14",
+    "tailwindcss": "^4.1.14"
+  }
+}
