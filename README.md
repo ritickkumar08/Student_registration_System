@@ -1,3 +1,6 @@
+link for the github :- https://github.com/ritickkumar08/Student_registration_System
+
+
 # Student_registration_System
 A simple and elegant student registration system that allows users to register their details — including name, student ID, email, and contact number — and view them instantly on the same page. Data is stored using LocalStorage, so entries persist even after refreshing the page.
 
