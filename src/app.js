@@ -1,16 +1,19 @@
+console.log("hehe");
+
+
 //selecting all the elements/nodes to be manipulated later as needed.
 const form = document.querySelector("#registrationForm")
 const studentBody = document.querySelector("#studentBody")
 
 //loading the existing records from the local storage
-let students = JSON.parse(localStorage.getItem("student") || []) // here we use the JSON.parse to convert the data into an object
+let students = JSON.parse(localStorage.getItem("students")) || [] // here we use the JSON.parse to convert the data into an object
 //because it returns a string.
 
 //to display the existing students. the list of students who have already registered.
 renderStudents();
 
 //form data handling
-form.addEventListener("submit",(event)=>{
+form.addEventListener("submit" ,(event)=>{
     event.preventDefault();//it prevents to submit the default values of the form.
 
 
@@ -27,7 +30,8 @@ form.addEventListener("submit",(event)=>{
     if(!email.includes("@")) return alert(`enter a valid email`)
     if(!/^\d{10}$/.test(contact)) return alert(`contact must be of 10 digits`)
  
-    const newStudent = [name, studentID, email,contact]
+    const newStudent = { name, studentID, email, contact }; //storing the input details as an object
+
     students.push(newStudent);
     saveToLocalStorage(); //calling a function to save the entered data to the localstorage.
     renderStudents();
@@ -44,9 +48,9 @@ function renderStudents() {
         <td class="border border-gray-300 px-4 py-2">${stu.studentID}</td>
         <td class="border border-gray-300 px-4 py-2">${stu.email}</td>
         <td class="border border-gray-300 px-4 py-2">${stu.contact}</td>
-        <td>
-        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-2 py-1 rounded" onclick="editStudent(${index})">Edit</button>
-        <button class="bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded" onclick="deleteStudent(${index})">Delete</button>
+        <td class="flex justify-around">
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-2 py-1 rounded hover:scale-105 transition-transform" onclick="editStudent(${index})">Edit</button>
+        <button class="bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded hover:scale-105 transition-transform" onclick="deleteStudent(${index})">Delete</button>
         </td>`
         studentBody.appendChild(row)
     });

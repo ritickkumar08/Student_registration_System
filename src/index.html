@@ -42,7 +42,7 @@
                     <input type="text" id="number" required placeholder="need you contact number." inputmode="numeric" pattern="\d+" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
                     <small class="hint">10 digit contact number</small>
                 </div>
-                <button type="submit" class="bg-green-600 hover:shadow-xs hover:shadow-slate-500 cursor-pointer text-white w-auto p-3 my-2.5 mx-1 rounded-lg font-semibold transition">Add Student</button>
+                <button type="submit" class="bg-green-600 hover:shadow-xs hover:shadow-slate-500 cursor-pointer text-white w-auto p-3 my-2.5 mx-1 rounded-lg font-semibold hover:scale-105 transition-transform">Add Student</button>
             </form>
         </section>
         <!-- section for displaying the registered students -->
@@ -59,13 +59,16 @@
                         <th class="border border-gray-300 px-4 py-2">Actions</th>
                     </tr>
                 </thead>
-                <tbody id="studentBody" class="divide-y divide-gray-200"></tbody>
+                <tbody id="studentBody" class="divide-y divide-gray-200 odd:bg-slate-800 even:bg-slate-700"></tbody>
             </table>
         </section>
     </main>
     <footer class="text-center border-b-0 mt-2 bg-black p-3">
         <p>© 2025 Student Registration System | Built with <i class="fa-solid fa-heart text-red-800"></i> by Ritick Kumar</p>
-        <p><b>Knowbie</b> → a fun twist on “newbie”, but for knowledge — meaning someone new who’s eager to learn.</p>
+        <p><b>Knowbie</b> → a fun twist on <i>“newbie”</i>, but for knowledge — meaning someone new who’s eager to learn.</p>
     </footer>
+
+
+    <script src="app.js"></script>
 </body>
 </html>
