@@ -1,6 +1,3 @@
-console.log("hehe");
-
-
 //selecting all the elements/nodes to be manipulated later as needed.
 const form = document.querySelector("#registrationForm")
 const studentBody = document.querySelector("#studentBody")
@@ -48,9 +45,9 @@ function renderStudents() {
         <td class="border border-gray-300 px-4 py-2">${stu.studentID}</td>
         <td class="border border-gray-300 px-4 py-2">${stu.email}</td>
         <td class="border border-gray-300 px-4 py-2">${stu.contact}</td>
-        <td class="flex justify-around">
-        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-2 py-1 rounded hover:scale-105 transition-transform" onclick="editStudent(${index})">Edit</button>
-        <button class="bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded hover:scale-105 transition-transform" onclick="deleteStudent(${index})">Delete</button>
+        <td class="flex justify-center gap-3 items-center">
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-1 mt-1 rounded hover:scale-105 transition-transform" onclick="editStudent(${index})"><i class="fa-solid fa-pencil"></i></button>
+        <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-1 mt-1 rounded hover:scale-105 transition-transform" onclick="deleteStudent(${index})"><i class="fa-solid fa-trash"></i></button>
         </td>`
         studentBody.appendChild(row)
     });
